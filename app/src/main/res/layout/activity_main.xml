@@ -8,32 +8,138 @@
 
     <TextView
         android:id="@+id/textView"
+        android:layout_width="305dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="230dp"
+        android:gravity="center"
+        android:text="This is an app that let you explore your past photos and see where you had been to! The app needs below permissions to run."
+        android:textAlignment="center"
+        android:textColor="#27A4F2"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/exploreButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="149dp"
-        android:text="Do you want to log a place you visited or a place you want to visit?"
+        android:layout_marginTop="610dp"
+        android:backgroundTint="#F28705"
+        android:onClick="explore"
+        android:text="Explore!"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/photoAccessText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="67dp"
+        android:layout_marginEnd="59dp"
+        android:layout_marginBottom="26dp"
+        android:text="Photo Access: X"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/mediaLocationAccessText"
+        app:layout_constraintEnd_toStartOf="@+id/grantPermissionButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/mediaLocationAccessText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="82dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="168dp"
+        android:layout_marginBottom="133dp"
+        android:text="Media Location Access: X"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/exploreButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/photoAccessText" />
+
+    <Button
+        android:id="@+id/grantPermissionButton"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="47dp"
+        android:layout_marginBottom="182dp"
+        android:backgroundTint="#F28705"
+        android:onClick="grantPermission"
+        android:text="Grant Permission"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/exploreButton"
+        app:layout_constraintStart_toEndOf="@+id/photoAccessText"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.483" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="159dp"
+        android:layout_height="144dp"
+        android:layout_marginStart="126dp"
+        android:layout_marginTop="85dp"
+        android:layout_marginEnd="126dp"
+        android:layout_marginBottom="28dp"
+        android:src="@drawable/earth"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/visitedButton"
+    <RadioGroup
+        android:id="@+id/buttonGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="315dp"
-        android:onClick="visitedMap"
-        android:text="Visited"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/mediaLocationAccessText">
+
+
+        <RadioButton
+            android:id="@+id/importAll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="#27A4F2"
+            android:checked="true"
+            android:onClick="chooseImportOption"
+            android:text="Import All Photos" />
+
+        <RadioButton
+            android:id="@+id/importSelected"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="#27A4F2"
+            android:onClick="chooseImportOption"
+            android:text="Import Selected Photos" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="305dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="Note: Use this link to get photos with GPS data. https://github.com/ianare/exif-samples/tree/master/jpg/gps"
+        android:textColor="#27A4F2"
+        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Want to Visit"
-        tools:layout_editor_absoluteX="180dp"
-        tools:layout_editor_absoluteY="405dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

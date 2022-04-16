@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/visitedList"
+        android:title="Places You've Been" />
+    <item
+        android:id="@+id/wantToVisit"
+        android:title="Places You Want to Visit" />
+    <item
+        android:id="@+id/summary"
+        android:title="Summary" />
+    <item
+        android:id="@+id/clear"
+        android:title="Clear wishlist" />
+
+
+</menu>
