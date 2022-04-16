@@ -20,14 +20,12 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="${MAPS_API_KEY}" />
+            android:value="AIzaSyC379H9s5XM5n-4zHfN1fe2jZsIbCTdr2M" />
 
         <activity
             android:name=".VisitedListActivity"
             android:exported="false" />
-        <activity
-            android:name=".SettingsActivity"
-            android:exported="false" />
+
         <activity
             android:name=".SummaryActivity"
             android:exported="false" />
