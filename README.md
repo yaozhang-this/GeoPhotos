@@ -7,3 +7,6 @@ This app reads such data from stored photos and display the location pins across
 This app also expands to include adding desired locations along with past visited locations, making this app a great travel companion.
 
 ## Screenshots
+<img src="launchpage.png" alt="drawing" width="300"/> <img src="mappage.png" alt="drawing" width="300"/>
+<img src="mappage2.png" alt="drawing" width="300"/> <img src="mappage3.png" alt="drawing" width="300"/>
+<img src="listpage.png" alt="drawing" width="300"/>
